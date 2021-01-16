@@ -11,7 +11,8 @@
 
     <ul>
         @foreach ($cursos as $curso)
-            <li>{{$curso->id}}: <a href="{{route('cursos.show', $curso->id)}}">{{$curso->name}}</a> <br>Categoria: {{$curso->category}} </li>            
+            <li>{{$curso->id}}: <a href="{{route('cursos.show', $curso)}}">{{$curso->name}}</a> <br>Categoria: {{$curso->category}} </li>    
+            <br>
         @endforeach
     </ul>
 

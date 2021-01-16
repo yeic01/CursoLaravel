@@ -7,13 +7,19 @@
     <!-- favicon -->
     <!-- estilos -->
     <!-- <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet"> -->
+    <style>
+        .active{
+            background: #c9c9c9;
+            padding: 2px;
+        }
+    </style>
 </head>
 <body>
     <!-- header -->
-    <!-- nav -->
+    @include('layaouts/partials/header')
     <h1>@yield('content')</h1>
 
-    <!-- footer -->
-    <!-- scripts -->
+    @include('layaouts/partials/footer')
+    @include('layaouts/partials/scripts')
 </body>
 </html>

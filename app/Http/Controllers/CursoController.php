@@ -36,9 +36,9 @@ class CursoController extends Controller
         return redirect()->route('cursos.show', $curso->id);
     }
 
-    public function show($id){
+    public function show(Curso $curso){
 
-        $curso = Curso::find($id);
+        //$curso = Curso::find($id);
         //return $curso;
         return view("cursos.show", compact('curso'));
     }
@@ -69,6 +69,8 @@ class CursoController extends Controller
     }
 
     public function destroy(Curso $curso){
+        //return $curso;
         $curso->delete();
+        return redirect()->route('cursos.index');
     }
 }
